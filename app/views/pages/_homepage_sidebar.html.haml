@@ -1,0 +1,26 @@
+-user = current_user
+%div.sidebar
+  %ul 
+    %li
+      = gravatar_for(user)
+      %h3
+        = user.name
+    %li
+      = user.email
+    %li
+      URL:
+      = link_to user_path(user)
+    %li
+      Liikuntakertoja:
+      = user.events.count
+    %li
+      = link_to "Kavereita: ", friends_user_path(user)
+      = user.friends.count
+      %br
+      - user.friends.each do |friend|
+        = link_to gravatar_for(friend, {:size=>  30, :default => "mm"}), friend
+    %li#friendship_requests
+      = link_to "Kaveripyyntöjä: ", friendship_requests_user_path(user)
+      = user.friendship_requesters.count
+      -user.friendship_requesters.each do |requester|
+        = link_to gravatar_for(requester, {:size =>  30, :default =>  "mm"}), requester

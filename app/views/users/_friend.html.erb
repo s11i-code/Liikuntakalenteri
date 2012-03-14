@@ -1,0 +1,6 @@
+<tr>
+  <td><%= gravatar_for friend %> </td>
+  <td><%= link_to friend.name, user_path(friend) %></td>
+  <td><%= render :partial => 'friendship_control_button', :locals => { :user => friend }  %>
+ </td>
+</tr>

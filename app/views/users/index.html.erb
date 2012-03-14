@@ -1,0 +1,7 @@
+<h1>Kaikki käyttäjät</h1>
+<p> Palvelussa on <%=  @user_count %> käyttäjää. Kaveripyynnön voi lähettää vain hyväksytylle käyttäjälle.  </p>
+<%= will_paginate %>
+<table>
+  <%= render @users %>
+</table>
+<%= will_paginate  %>

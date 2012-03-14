@@ -1,0 +1,15 @@
+  <%= form_for @event do |f|%>
+  <%= render('shared/error_messages', :object => f.object) %>
+  <div class="field">
+    <%=f.label :yol_event_url %> <%=  f.text_field :yol_event_url %>
+  </div>
+  <div class="field">
+    <%=f.label :yol_username %> <%=  f.text_field :yol_username %>
+  </div>
+  <div class="field">
+    <%=f.label :yol_password %> <%=  f.password_field :yol_password %>
+  </div>
+  <div class="action">
+    <%=f.submit "Tee varaus" %>
+  </div>
+<% end %>

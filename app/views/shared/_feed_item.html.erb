@@ -1,0 +1,20 @@
+<%  creator = feed_item.user%>
+<tr>
+
+  <td class="event">
+    
+    <span class ="image"><%= link_to gravatar_for(creator, {:size=> 35, :default => "mm"}), creator %> </span>
+    <% unless creator == current_user %>
+    <span class ="name"><%= creator.name %> </span> <br />
+    <%end%>
+    <span class="content" ><%= feed_item.name %> <%= as_inessive feed_item.location unless feed_item.location.nil? %></span>
+    <span class="timestamp">
+      <%= time_ago_in_words(feed_item.start_at) %>
+      <% if feed_item.start_at.future? %>
+        alkamiseen.
+      <% else %>
+        sitten.
+      <% end %>
+    </span>
+  </td>
+</tr>

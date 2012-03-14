@@ -1,0 +1,14 @@
+
+<div id="new_event_form">
+  <% @event = current_user.events.build %>
+  <h3><%= link_to "Liikuntatapahtuman ", "http://yliopistoliikunta.helsinki.fi/yol/web/fi/event/listEvents.do?shortcutSportId=825079"%>linkki:</h3>
+
+  <%= form_for(:event, :url => events_path, :class=>"new event") do |f|%>
+    <div class="field">
+      <%=  f.text_field :yol_event_url, :size => 39 %>
+    </div>
+    <div class="action">
+      <%=f.submit "Lisää tapahtuma" %>
+    </div>
+  <% end %>
+</div>

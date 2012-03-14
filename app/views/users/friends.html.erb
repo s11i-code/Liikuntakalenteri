@@ -1,0 +1,5 @@
+<h1>Käyttäjän <%= @user.name %> kaverit </h1>
+<p> Yhteensä <%=@friends.count %> kpl: </p>
+<table>
+  <%= render :partial => 'friend', :collection => @friends, :as => :friend %>
+</table>

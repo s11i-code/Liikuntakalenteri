@@ -1,0 +1,14 @@
+<div class="profile">
+  <div class="main">
+    <%= form_for @user do |f|%>
+      <%= render 'form', :f => f %>
+      <div class="action">
+        <%= f.submit "Päivitä tiedot"%>
+      </div>
+
+    <% end %>
+    <div id="gravatar_change">
+      <%= gravatar_for @user %>  <%= link_to "Muuta Gravataria", "http://gravatar.com/emails"%>
+    </div>
+  </div>
+</div>

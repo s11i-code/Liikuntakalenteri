@@ -1,0 +1,13 @@
+%header
+  = link_to logo, root_path
+  .nav.round
+    %ul
+      %li= link_to "Koti", root_path
+      -if signed_in?
+        %li= link_to " | Oma sivu", user_path(current_user)
+        %li= link_to " | Kalenteri", events_path
+        %li= link_to " | Tietojen muutos", edit_user_path(current_user)
+        %li= link_to " | Käyttäjät", users_path
+      -else
+        %li= link_to " | Tietoa sivusta", about_path
+        %li= link_to " | Luo tili", signup_path

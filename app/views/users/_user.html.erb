@@ -1,0 +1,20 @@
+<tr>
+  <% if current_user.admin? || user.approved %>
+  <td><%= gravatar_for user %> </td>
+  <td><%= link_to user.name, user_path(user) %></td>
+  <td><%= render :partial => 'friendship_control_button', :locals => { :user => user } %> </td>
+  <% end %>
+  <% if current_user.admin? %>
+    <% if user.admin? %>
+      <td>Ylläpitäjä</td>
+    <% else %>
+      <td>Peruskäyttäjä</td>
+    <% end %>
+    <% if user.approved? %>
+      <td> <%= link_to "Estä", approval_path(user), :method=>:put,  :confirm => "Oletko varma?"   %> </td>
+    <% else %>
+      <td> <%= link_to "Hyväksy", approval_path(user), :method=>:put, :confirm => "Oletko varma?"  %> </td>
+    <% end %>
+    <td> <%= link_to "Poista", user, :method => :delete, :confirm => "Haluatko varmasti poistaa käyttäjän?"%> </td>
+  <% end %>
+</tr>

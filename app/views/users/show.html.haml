@@ -1,0 +1,11 @@
+%div.main
+  %h1
+    = @user.name
+  = link_to gravatar_for(@user, {:size => 150, :default => "mm"})
+  = render(:partial => 'friendship_control_button', :locals => { :user => @user })
+  -if @user == current_user or current_user.friends_with?(@user)
+    -unless @events.empty?
+      %table.events
+        = render @events
+      = will_paginate @events
+= render(:partial => 'user_sidebar', :locals => { :user => @user })

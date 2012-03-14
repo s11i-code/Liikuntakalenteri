@@ -1,0 +1,202 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3/inline-block";
+@import "blueprint";
+@import "blueprint/grid";
+@import "blueprint/buttons";
+
+
+$bg-color: #CDC5BF;
+$main-text-color: #8B7765;
+$sans-serif-fonts: "Lucida Grande", "Arial";
+$serif-fonts: Georgia, "Times New Roman";
+$content-color: #fff;
+$sidebar-bg-color: #FFEFC6;
+$content-columns: 22;
+$h1-color: #CD6600;
+/* LAYOUT */
+#container {
+  @include container;
+  .header, .page_content, .main > h1, h3 { @include column($blueprint-grid-columns, true); }
+  .footer nav { @include column(7); @include prepend(6);  }
+  .page_content{ @include prepend-top(30px); @include append-bottom(60px);}
+  .main{
+    @include column(15);
+    @include prepend(1);
+    @include append-bottom(23px);
+
+  }
+  .sidebar {
+    h3 { float:left; padding-left: 0px; }
+    @include column(6, true);
+    @include append(2);
+  }
+}
+button, input[type^="submit"] {
+  padding: 5px 10px;
+  font-size: 14px;
+  @include button-hover-colors(#529214, #e6efc2, #c6d880);
+  @include button-active-colors(white, #529214, #529214);
+  @include button-colors(#fff, $bg-color, $bg-color);
+
+}
+body{
+    background-color: $bg-color;
+    font-family: $sans-serif-fonts;
+    color: $main-text-color;
+    padding-top: 40px;
+    font-size: 14px;
+    a {
+        color: #8B5A00;
+        text-decoration: none;
+        &:hover {
+            color: #8B7E66;
+            text-decoration: underline;
+        }
+        &:visited { color: #CD853F; }
+    }
+}
+
+li { list-style-type:none; }
+
+form{
+    @include blueprint-form-layout;
+    .input {
+        border: 1px solid #006;
+        padding: 3px;
+        padding-left: 5px;
+    }
+    .action { padding: 20px 7px;}
+}
+
+h1 {
+  font-size: 28px;
+  color: $h1-color;
+  letter-spacing: 1.7px;
+  text-align:center;
+  padding-bottom:30px;
+}
+h3 { font-size: 16px; font-family: $sans-serif-fonts;}
+
+.framed-image {
+    padding: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0, 0.2);
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.nav{@include horizontal-list(5px); color: $sidebar-bg-color; }
+
+.content-area{
+    background-color: $content-color;
+    @include border-radius(8px);
+    padding-top: 40px;
+}
+
+.nav, .page_content{ @extend .content-area; }
+
+.signin_button{
+    @extend .content-area;
+    @include border-radius(2px);
+    position:absolute;
+    top: 0px;
+    right: 5px;
+    padding: 5px;
+    font-size: 0.65em;
+
+}
+
+.signup_button {
+    border:2px solid #c6d880;
+    background:#e6efc2;
+    margin-top: 35px;
+    margin-right: 100px;
+    display: block;
+    float:right;
+    text-align: center;
+    width: 160px;
+    color:#6E8B3D;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    &:visited { color: #6E8B3D ; }
+    @include border-radius(8px);
+}
+
+.description {
+    padding-top: 20px;
+    padding-left: 65px;
+    width: 350px;
+    text-align: justify;
+    line-height: 1.9em;
+    letter-spacing: 1.3px;
+}
+
+
+.page_content {
+    font-family: $serif-fonts;
+    min-height: 220px;
+}
+
+
+header{
+    height:80px;
+    font-size: 13px;
+    img {
+        float:left;
+        border: 10px solid #fff;
+        @include border-radius(12px); }
+    .nav {
+        float:right;
+        font-size: 13px;
+        height: 11px;
+        padding:8px;
+        ul{ margin:auto; }
+    }
+}
+
+footer {
+  font-size: 13px;
+}
+table.events tr {
+    height: 60px;
+    td.event {
+        border-top: 1px solid #ccc;
+        vertical-align: top;
+        padding-top: 10px;
+        span.timestamp {
+            display:block;
+            font-size: 95%;
+            color: #666;
+        }
+    }
+}
+
+/*HOME PAGE*/
+
+
+.event_area {
+    table{ width: 600px; float:left; }
+}
+
+.sidebar {
+
+    img { float:left; border: 1px solid #DDDDDD;}
+    ul {
+      padding: 15px;
+      background-color: $sidebar-bg-color;
+      @include border-radius(8px);
+      min-height: 110px;
+    }
+    li:first-child img{
+        margin: 3px;
+        margin-left: 6px;
+        @extend .framed-image;
+
+    }
+    h3 { font-size: 20px; padding: 4px 15px; color: #CD853F; }
+}
+
+
+

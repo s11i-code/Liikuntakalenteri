@@ -1,0 +1,10 @@
+<%= form_for current_user.recognitions.build(:recognised_id => user.id), :url => friendship_path(user),
+  :html => { :method => :delete } do |f| %>
+
+  <div><%= f.hidden_field :recognised_id, :name => :non_recognised_id %></div>
+  <%  if deleting_request %>
+    <div class="actions"><%= f.submit "Peruuta kaveripyyntö", :name => 'deleting_request' %></div>
+  <% elsif deleting_friendship %>
+    <div class="actions"><%= f.submit "Poista kavereista", :name => 'deleting_friendship' %></div>
+  <% end %>
+<% end %>

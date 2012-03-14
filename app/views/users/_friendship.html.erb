@@ -1,0 +1,10 @@
+<%= form_for current_user.recognitions.build(:recognised_id => user.id), :url => friendships_path(user) do |f| %>
+  <div><%= f.hidden_field :recognised_id %></div>
+
+  <%  if requesting_friendship %>
+    <div class="actions"><%= f.submit "Pyydä kaveriksi", :name => 'requesting_friendship'%></div>
+  <% elsif confirming_friendship%>
+    <div class="actions"><%= f.submit "Hyväksy kaveripyyntö", :name => 'confirming_friendship' %></div>
+  <% end %>
+
+<% end %>

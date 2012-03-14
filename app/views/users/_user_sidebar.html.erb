@@ -1,0 +1,11 @@
+<div class ="sidebar round">
+  <ul>
+    <li><%= user.email %></li>
+    <li>URL: <%= link_to user_path(user)%> </li>
+    <li>Liikuntakertoja: <%= user.events.count %> </li>
+    <li><%= link_to "Kavereita", friends_user_path(user)%>: <%= user.friends.count %> </li>
+    <% user.friends.each do |friend|%>
+      <%= link_to gravatar_for(friend, {:size=> 30, :default => "mm"}), friend %>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,10 @@
+<%if object.errors.any?%>
+  <div class="error">
+    <p>Hups! Haluttua kohdetta ei tallennettu, sillä virheitä löytyi <%= object.errors.count %> kpl: </p>
+    <ul>
+    <%object.errors.full_messages.each do|message|%>
+      <li><%=  message %>.</li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

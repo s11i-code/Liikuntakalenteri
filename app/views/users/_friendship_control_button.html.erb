@@ -1,0 +1,17 @@
+<% if current_user != user and user.approved? %>
+  <%  if current_user.waiting_friendship_confirmation_from?(user) %>
+    <%= render :partial => 'friendship_deletion', :locals => {:user => user, :deleting_request => true,
+      :deleting_friendship => false}  %>
+
+  <% elsif user.waiting_friendship_confirmation_from?(current_user) %>
+    <%= render :partial => 'friendship', :locals => {:user => user, :requesting_friendship => false,
+      :confirming_friendship => true}  %>
+
+  <% elsif current_user.friends_with?(user) %>
+    <%= render :partial => 'friendship_deletion', :locals => {:user => user, :deleting_request => false,
+      :deleting_friendship => true} %>
+  <% else %>
+    <%= render :partial => 'friendship', :locals => {:user => user, :requesting_friendship => true,
+      :confirming_friendship => false} %>
+  <% end %>
+<% end %>

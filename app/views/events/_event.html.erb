@@ -1,0 +1,15 @@
+<tr>
+  <td class="event">
+    <span class="content"><%= event.name%>
+      <%= as_inessive event.location unless event.location.nil? %>
+    </span>
+    <span class="timestamp">
+      <%= time_ago_in_words(event.start_at) %>
+      <% if event.start_at.future? %>
+        alkamiseen.
+      <% else %>
+        sitten.
+      <% end %>
+    </span>
+  </td>
+</tr>

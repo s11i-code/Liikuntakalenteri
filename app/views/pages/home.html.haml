@@ -1,0 +1,16 @@
+-if signed_in?
+  %h1 Liikuntatapahtumasi
+  %div.main
+    = render "events/new_event"
+    -unless @feed_items.empty?
+      %table.events
+        = render :partial =>'shared/feed_item', :collection => @feed_items
+      = will_paginate @feed_items
+  = render 'pages/homepage_sidebar'
+-else
+  %h1 Mikä yliopistoliikuntakalenteri?
+  %div.main
+    %div.description_container
+      %p.description Yliopistoliikuntakalenteri on Yliopistoliikunnan käyttäjien Facebook. Voit lisätä kavereita, ja pääset näkemään ystäviesi tulevat ja menneet liikuntamenot.
+  = link_to "Uusi käyttäjä?", signup_path, :class => "signup_button"
+
