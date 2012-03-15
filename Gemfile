@@ -11,6 +11,7 @@ gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'event-calendar', :require => 'event_calendar'
 gem 'simple_form'
+gem 'activerecord-postgresql-adapter'
 
 # Gems used only for assets and not required
 # in production environments by default.
