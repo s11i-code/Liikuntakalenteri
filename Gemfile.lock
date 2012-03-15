@@ -177,6 +177,7 @@ DEPENDENCIES
   gravatar_image_tag
   haml-rails
   jquery-rails
+  nokogiri
   pg
   rails (= 3.2.2)
   rspec

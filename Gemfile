@@ -12,7 +12,7 @@ gem 'will_paginate'
 gem 'event-calendar', :require => 'event_calendar'
 gem 'simple_form'
 gem 'faker'
-
+gem 'nokogiri'
 
 # Gems used only for assets and not required
 # in production environments by default.
