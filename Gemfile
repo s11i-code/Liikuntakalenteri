@@ -11,6 +11,8 @@ gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'event-calendar', :require => 'event_calendar'
 gem 'simple_form'
+gem 'faker'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,7 +31,6 @@ group :development do
   gem 'haml-rails'
   gem 'rspec-rails'
   gem 'annotate'
-  gem 'faker'
 end
 
 group :production do
