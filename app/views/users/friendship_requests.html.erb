@@ -1,6 +1,9 @@
-<% @page_title = "Kaveripyynnöt" %>
-<h1>Kaveripyynnöt</h1>
-<p> Yhteensä <%= @friendship_requesters.count %>  kpl: </p>
-<table>
-  <%= render :partial => 'friend', :collection => @friendship_requesters, :as => :friend %>
-</table>
+<div class="main">
+  <% @page_title = "Kaveripyynnöt" %>
+  <h1>Kaveripyynnöt</h1>
+
+  <p> Yhteensä <%= @friendship_requesters.count %>  kpl: </p>
+  <table>
+    <%= render :partial => 'friend', :collection => @friendship_requesters, :as => :friend %>
+  </table>
+</div>

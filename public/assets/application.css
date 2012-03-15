@@ -63,15 +63,100 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 4, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.feedback, .error, .alert, .notice, .success, .info {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid #dddddd;
+}
+
+/* line 5, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.error, .alert {
+  background: #fbe3e4;
+  color: #8a1f11;
+  border-color: #fbc2c4;
+}
+/* line 27, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.error a, .alert a {
+  color: #8a1f11;
+}
+
+/* line 7, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.notice {
+  background: #fff6bf;
+  color: #514721;
+  border-color: #ffd324;
+}
+/* line 36, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.notice a {
+  color: #514721;
+}
+
+/* line 8, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.success {
+  background: #e6efc2;
+  color: #264409;
+  border-color: #c6d880;
+}
+/* line 45, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.success a {
+  color: #264409;
+}
+
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.info {
+  background: #d5edf8;
+  color: #205791;
+  border-color: #92cae4;
+}
+/* line 54, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.info a {
+  color: #205791;
+}
+
+/* line 10, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.hide {
+  display: none;
+}
+
+/* line 11, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.highlight {
+  background: yellow;
+}
+
+/* line 12, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.added {
+  background: #006600;
+  color: white;
+}
+
+/* line 13, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.removed {
+  background: #990000;
+  color: white;
+}
+
 /* LAYOUT */
-/* line 18, ../../app/assets/stylesheets/application.css.scss */
+/* line 20, ../../app/assets/stylesheets/application.css.scss */
 #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 20, ../../app/assets/stylesheets/application.css.scss */
+/* line 22, ../../app/assets/stylesheets/application.css.scss */
+#container .notifications {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 790px;
+  padding-left: 80px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.3-p125/bundler/gems/compass-0c290edd072b/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #container .notifications {
+  overflow-x: hidden;
+}
+/* line 26, ../../app/assets/stylesheets/application.css.scss */
 #container .header, #container .page_content, #container .main > h1, #container h3 {
   display: inline;
   float: left;
@@ -82,7 +167,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 * html #container .header, * html #container .page_content, * html #container .main > h1, * html #container h3 {
   overflow-x: hidden;
 }
-/* line 21, ../../app/assets/stylesheets/application.css.scss */
+/* line 27, ../../app/assets/stylesheets/application.css.scss */
 #container .footer nav {
   display: inline;
   float: left;
@@ -94,12 +179,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 * html #container .footer nav {
   overflow-x: hidden;
 }
-/* line 22, ../../app/assets/stylesheets/application.css.scss */
+/* line 28, ../../app/assets/stylesheets/application.css.scss */
 #container .page_content {
   margin-top: 30px;
   margin-bottom: 60px;
 }
-/* line 23, ../../app/assets/stylesheets/application.css.scss */
+/* line 29, ../../app/assets/stylesheets/application.css.scss */
 #container .main {
   display: inline;
   float: left;
@@ -112,7 +197,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 * html #container .main {
   overflow-x: hidden;
 }
-/* line 29, ../../app/assets/stylesheets/application.css.scss */
+/* line 35, ../../app/assets/stylesheets/application.css.scss */
 #container .sidebar {
   display: inline;
   float: left;
@@ -120,7 +205,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 230px;
   padding-right: 80px;
 }
-/* line 30, ../../app/assets/stylesheets/application.css.scss */
+/* line 36, ../../app/assets/stylesheets/application.css.scss */
 #container .sidebar h3 {
   float: left;
   padding-left: 0px;
@@ -130,7 +215,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   overflow-x: hidden;
 }
 
-/* line 35, ../../app/assets/stylesheets/application.css.scss */
+/* line 41, ../../app/assets/stylesheets/application.css.scss */
 button, input[type^="submit"] {
   padding: 5px 10px;
   font-size: 14px;
@@ -151,7 +236,7 @@ button:active, input[type^="submit"]:active {
   color: white;
 }
 
-/* line 43, ../../app/assets/stylesheets/application.css.scss */
+/* line 49, ../../app/assets/stylesheets/application.css.scss */
 body {
   background-color: #cdc5bf;
   font-family: "Lucida Grande", "Arial";
@@ -159,22 +244,22 @@ body {
   padding-top: 40px;
   font-size: 14px;
 }
-/* line 49, ../../app/assets/stylesheets/application.css.scss */
+/* line 55, ../../app/assets/stylesheets/application.css.scss */
 body a {
   color: #8B5A00;
   text-decoration: none;
 }
-/* line 52, ../../app/assets/stylesheets/application.css.scss */
+/* line 58, ../../app/assets/stylesheets/application.css.scss */
 body a:hover {
   color: #8B7E66;
   text-decoration: underline;
 }
-/* line 56, ../../app/assets/stylesheets/application.css.scss */
+/* line 62, ../../app/assets/stylesheets/application.css.scss */
 body a:visited {
   color: #CD853F;
 }
 
-/* line 60, ../../app/assets/stylesheets/application.css.scss */
+/* line 66, ../../app/assets/stylesheets/application.css.scss */
 li {
   list-style-type: none;
 }
@@ -212,18 +297,18 @@ form textarea {
 form select {
   margin: 0.5em 0;
 }
-/* line 64, ../../app/assets/stylesheets/application.css.scss */
+/* line 70, ../../app/assets/stylesheets/application.css.scss */
 form .input {
   border: 1px solid #006;
   padding: 3px;
   padding-left: 5px;
 }
-/* line 69, ../../app/assets/stylesheets/application.css.scss */
+/* line 75, ../../app/assets/stylesheets/application.css.scss */
 form .action {
   padding: 20px 7px;
 }
 
-/* line 72, ../../app/assets/stylesheets/application.css.scss */
+/* line 78, ../../app/assets/stylesheets/application.css.scss */
 h1 {
   font-size: 28px;
   color: #cd6600;
@@ -232,13 +317,13 @@ h1 {
   padding-bottom: 30px;
 }
 
-/* line 79, ../../app/assets/stylesheets/application.css.scss */
+/* line 85, ../../app/assets/stylesheets/application.css.scss */
 h3 {
   font-size: 16px;
   font-family: "Lucida Grande", "Arial";
 }
 
-/* line 81, ../../app/assets/stylesheets/application.css.scss */
+/* line 87, ../../app/assets/stylesheets/application.css.scss */
 .framed-image, .sidebar li:first-child img {
   padding: 2px;
   background-color: #FFFFFF;
@@ -247,7 +332,7 @@ h3 {
   -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* line 89, ../../app/assets/stylesheets/application.css.scss */
+/* line 95, ../../app/assets/stylesheets/application.css.scss */
 .nav {
   margin: 0;
   padding: 0;
@@ -280,7 +365,7 @@ h3 {
   padding-right: 0;
 }
 
-/* line 91, ../../app/assets/stylesheets/application.css.scss */
+/* line 97, ../../app/assets/stylesheets/application.css.scss */
 .content-area, .nav, .page_content, .signin_button {
   background-color: white;
   -webkit-border-radius: 8px;
@@ -291,7 +376,7 @@ h3 {
   padding-top: 40px;
 }
 
-/* line 99, ../../app/assets/stylesheets/application.css.scss */
+/* line 105, ../../app/assets/stylesheets/application.css.scss */
 .signin_button {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -305,7 +390,7 @@ h3 {
   font-size: 0.65em;
 }
 
-/* line 110, ../../app/assets/stylesheets/application.css.scss */
+/* line 116, ../../app/assets/stylesheets/application.css.scss */
 .signup_button {
   border: 2px solid #c6d880;
   background: #e6efc2;
@@ -325,12 +410,12 @@ h3 {
   -o-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 123, ../../app/assets/stylesheets/application.css.scss */
+/* line 129, ../../app/assets/stylesheets/application.css.scss */
 .signup_button:visited {
   color: #6E8B3D;
 }
 
-/* line 127, ../../app/assets/stylesheets/application.css.scss */
+/* line 133, ../../app/assets/stylesheets/application.css.scss */
 .description {
   padding-top: 20px;
   padding-left: 65px;
@@ -340,18 +425,18 @@ h3 {
   letter-spacing: 1.3px;
 }
 
-/* line 137, ../../app/assets/stylesheets/application.css.scss */
+/* line 143, ../../app/assets/stylesheets/application.css.scss */
 .page_content {
   font-family: Georgia, "Times New Roman";
   min-height: 220px;
 }
 
-/* line 143, ../../app/assets/stylesheets/application.css.scss */
+/* line 149, ../../app/assets/stylesheets/application.css.scss */
 header {
   height: 80px;
   font-size: 13px;
 }
-/* line 146, ../../app/assets/stylesheets/application.css.scss */
+/* line 152, ../../app/assets/stylesheets/application.css.scss */
 header img {
   float: left;
   border: 10px solid #fff;
@@ -361,34 +446,34 @@ header img {
   -o-border-radius: 12px;
   border-radius: 12px;
 }
-/* line 150, ../../app/assets/stylesheets/application.css.scss */
+/* line 156, ../../app/assets/stylesheets/application.css.scss */
 header .nav {
   float: right;
   font-size: 13px;
   height: 11px;
   padding: 8px;
 }
-/* line 155, ../../app/assets/stylesheets/application.css.scss */
+/* line 161, ../../app/assets/stylesheets/application.css.scss */
 header .nav ul {
   margin: auto;
 }
 
-/* line 159, ../../app/assets/stylesheets/application.css.scss */
+/* line 165, ../../app/assets/stylesheets/application.css.scss */
 footer {
   font-size: 13px;
 }
 
-/* line 162, ../../app/assets/stylesheets/application.css.scss */
+/* line 168, ../../app/assets/stylesheets/application.css.scss */
 table.events tr {
   height: 60px;
 }
-/* line 164, ../../app/assets/stylesheets/application.css.scss */
+/* line 170, ../../app/assets/stylesheets/application.css.scss */
 table.events tr td.event {
   border-top: 1px solid #ccc;
   vertical-align: top;
   padding-top: 10px;
 }
-/* line 168, ../../app/assets/stylesheets/application.css.scss */
+/* line 174, ../../app/assets/stylesheets/application.css.scss */
 table.events tr td.event span.timestamp {
   display: block;
   font-size: 95%;
@@ -396,18 +481,18 @@ table.events tr td.event span.timestamp {
 }
 
 /*HOME PAGE*/
-/* line 180, ../../app/assets/stylesheets/application.css.scss */
+/* line 186, ../../app/assets/stylesheets/application.css.scss */
 .event_area table {
   width: 600px;
   float: left;
 }
 
-/* line 185, ../../app/assets/stylesheets/application.css.scss */
+/* line 191, ../../app/assets/stylesheets/application.css.scss */
 .sidebar img {
   float: left;
   border: 1px solid #DDDDDD;
 }
-/* line 186, ../../app/assets/stylesheets/application.css.scss */
+/* line 192, ../../app/assets/stylesheets/application.css.scss */
 .sidebar ul {
   padding: 15px;
   background-color: #ffefc6;
@@ -418,12 +503,12 @@ table.events tr td.event span.timestamp {
   border-radius: 8px;
   min-height: 110px;
 }
-/* line 192, ../../app/assets/stylesheets/application.css.scss */
+/* line 198, ../../app/assets/stylesheets/application.css.scss */
 .sidebar li:first-child img {
   margin: 3px;
   margin-left: 6px;
 }
-/* line 198, ../../app/assets/stylesheets/application.css.scss */
+/* line 204, ../../app/assets/stylesheets/application.css.scss */
 .sidebar h3 {
   font-size: 20px;
   padding: 4px 15px;

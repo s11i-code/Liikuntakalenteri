@@ -1,13 +1,15 @@
-<h1>Sisäänkirjautuminen</h1>
-<%= form_for(:session, :url => sessions_path) do |f|%>
-  <div class="field">
-    <%=f.label :email %> <%=  f.text_field :email %>
-  </div>
-  <div class="field">
-    <%=f.label :password %> <%=  f.password_field :password %>
-  </div>
-  <div class="action">
-    <%=f.submit "Kirjaudu sisään" %>
-  </div>
-<% end %>
-<p>Uusi käyttäjä? <%= link_to "Luo tili täällä!", signup_path %> </p>
+<div class="main">
+  <h1>Sisäänkirjautuminen</h1>
+  <%= form_for(:session, :url => sessions_path) do |f| %>
+      <div class="field">
+        <%= f.label :email %> <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :password %> <%= f.password_field :password %>
+      </div>
+      <div class="action">
+        <%= f.submit "Kirjaudu sisään" %>
+      </div>
+  <% end %>
+  <p>Uusi käyttäjä? <%= link_to "Luo tili täällä!", signup_path %> </p>
+</div>

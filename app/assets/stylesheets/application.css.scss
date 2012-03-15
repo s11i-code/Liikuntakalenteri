@@ -5,7 +5,6 @@
 @import "blueprint/grid";
 @import "blueprint/buttons";
 
-
 $bg-color: #CDC5BF;
 $main-text-color: #8B7765;
 $sans-serif-fonts: "Lucida Grande", "Arial";
@@ -14,9 +13,16 @@ $content-color: #fff;
 $sidebar-bg-color: #FFEFC6;
 $content-columns: 22;
 $h1-color: #CD6600;
+
+@include blueprint-interaction;
+
 /* LAYOUT */
 #container {
   @include container;
+  .notifications {
+    @include column($blueprint-grid-columns - 4, true);
+    @include prepend(2);
+  }
   .header, .page_content, .main > h1, h3 { @include column($blueprint-grid-columns, true); }
   .footer nav { @include column(7); @include prepend(6);  }
   .page_content{ @include prepend-top(30px); @include append-bottom(60px);}
