@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'event-calendar', :require => 'event_calendar'
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,7 +27,6 @@ end
 
 group :development do
   gem 'haml-rails'
-  gem 'simple_form'
   gem 'rspec-rails'
   gem 'annotate'
   gem 'faker'
