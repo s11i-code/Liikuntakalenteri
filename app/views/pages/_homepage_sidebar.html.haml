@@ -16,11 +16,13 @@
     %li
       = link_to "Kavereita: ", friends_user_path(user)
       = user.friends.count
-      %br
-      - user.friends.each do |friend|
-        = link_to gravatar_for(friend, {:size=>  30, :default => "mm"}), friend
+      %ul.friends
+        - user.friends.each do |friend|
+          %li
+            = link_to gravatar_for(friend, {:size=>  30, :default => "mm"}), friend
     %li#friendship_requests
-      = link_to "Kaveripyyntöjä: ", friendship_requests_user_path(user)
-      = user.friendship_requesters.count
-      -user.friendship_requesters.each do |requester|
-        = link_to gravatar_for(requester, {:size =>  30, :default =>  "mm"}), requester
+      = link_to "Kaveripyyntöjä: "+ user.friendship_requesters.count.to_s, friendship_requests_user_path(user)
+      %ul.friend_requests
+        -user.friendship_requesters.each do |requester|
+          %li
+            = link_to gravatar_for(requester, {:size =>  30, :default =>  "mm"}), requester

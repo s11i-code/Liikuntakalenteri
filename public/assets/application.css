@@ -324,7 +324,7 @@ h3 {
 }
 
 /* line 87, ../../app/assets/stylesheets/application.css.scss */
-.framed-image, .sidebar li:first-child img {
+.framed-image, .main img, .sidebar > ul > li:first-child img {
   padding: 2px;
   background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
@@ -469,31 +469,30 @@ table.events tr {
 }
 /* line 170, ../../app/assets/stylesheets/application.css.scss */
 table.events tr td.event {
+  font-size: 110%;
   border-top: 1px solid #ccc;
   vertical-align: top;
   padding-top: 10px;
 }
-/* line 174, ../../app/assets/stylesheets/application.css.scss */
+/* line 175, ../../app/assets/stylesheets/application.css.scss */
 table.events tr td.event span.timestamp {
   display: block;
-  font-size: 95%;
   color: #666;
+  padding: 10 px 30px;
 }
 
-/*HOME PAGE*/
+/* line 183, ../../app/assets/stylesheets/application.css.scss */
+.main img {
+  margin: 4px 7px;
+}
+
 /* line 186, ../../app/assets/stylesheets/application.css.scss */
-.event_area table {
-  width: 600px;
-  float: left;
-}
-
-/* line 191, ../../app/assets/stylesheets/application.css.scss */
 .sidebar img {
   float: left;
   border: 1px solid #DDDDDD;
 }
-/* line 192, ../../app/assets/stylesheets/application.css.scss */
-.sidebar ul {
+/* line 187, ../../app/assets/stylesheets/application.css.scss */
+.sidebar > ul {
   padding: 15px;
   background-color: #ffefc6;
   -webkit-border-radius: 8px;
@@ -503,12 +502,16 @@ table.events tr td.event span.timestamp {
   border-radius: 8px;
   min-height: 110px;
 }
-/* line 198, ../../app/assets/stylesheets/application.css.scss */
-.sidebar li:first-child img {
+/* line 192, ../../app/assets/stylesheets/application.css.scss */
+.sidebar > ul > li:first-child img {
   margin: 3px;
   margin-left: 6px;
 }
-/* line 204, ../../app/assets/stylesheets/application.css.scss */
+/* line 200, ../../app/assets/stylesheets/application.css.scss */
+.sidebar ul.friend_requests, .sidebar ul.friends {
+  clear: both;
+}
+/* line 201, ../../app/assets/stylesheets/application.css.scss */
 .sidebar h3 {
   font-size: 20px;
   padding: 4px 15px;
