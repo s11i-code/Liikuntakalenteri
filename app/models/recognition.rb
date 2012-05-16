@@ -3,7 +3,8 @@
 #
 # Table name: recognitions
 #
-#  id            :integer         not null, primary key
+#  id            :integer
+#       not null, primary key
 #  recogniser_id :integer
 #  recognised_id :integer
 #  created_at    :datetime
